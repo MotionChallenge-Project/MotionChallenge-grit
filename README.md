@@ -1,35 +1,23 @@
 # Motion Challenge · grit
 
-[grit](https://github.com/mrzuang/GRIT_teleop_deploy) checkpoint adapter. G1 29DoF; LAFAN40 is the first suite.
+[Author project](https://github.com/mrzuang/GRIT_teleop_deploy) · [Checkpoint](https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx) · [Provenance](provenance.json)
 
 ## Install and run
 
-```sh
+```bash
 git clone --recurse-submodules https://github.com/motion-challenge-project/motion-challenge-grit.git
 cd motion-challenge-grit
 uv sync
 uv run evaluate.py
 ```
 
-Reuses local `checkpoints/policy.onnx` or the external cache; missing artifacts are
-fetched and hash-checked. Use `--weights PATH --data PATH --offline` for local files.
-Results and traces are written outside Git. `--help` lists options.
+One full rollout per motion produces success, completion and all six MPBPE values
+in one verified `result.json`. MuJoCo 3.17 CPU batch; `--jobs 8` sets rollout and
+verification parallelism. Progress updates every five seconds.
 
-The root `motion-challenge` submodule owns data, physics, metrics and verification.
-This repository only adapts model inference; no `sim2real` dependency.
+Missing data and weights are downloaded and hash-checked. Cached files can be
+selected with `--weights PATH --data PATH --offline`. Results and traces stay
+outside Git.
 
-[Provenance](provenance.json)
-
-MuJoCo 3.17 batch is the default. Use `--jobs 8` for parallel clips;
-download and evaluation progress updates every 5 seconds.
-
-
-## Checkpoint source
-
-[mrzuang/GRIT_teleop_deploy](https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md) · [sim2real/checkpoints/policy.onnx](https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx). Author-released checkpoint.
-
-Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.
-
-One `uv run evaluate.py` rolls out each complete motion once, then verifies the trace.
-The same trajectory provides success, completion and all six MPBPE values in one
-`result.json`, with one source revision. No branch switching is needed.
+This repository adapts model inference. The pinned root `motion-challenge`
+submodule owns datasets, physics, metrics and verification. See `--help` for options.

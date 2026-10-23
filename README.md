@@ -18,17 +18,18 @@ Results and traces are written outside Git. `--help` lists options.
 The root `motion-challenge` submodule owns data, physics, metrics and verification.
 This repository only adapts model inference; no `sim2real` dependency.
 
-**Development adapter — author-inference review pending.**
 [Provenance](provenance.json)
 
 MuJoCo 3.17 batch is the default. Use `--jobs 8` for parallel clips;
 download and evaluation progress updates every 5 seconds.
 
-Run all frames after tracking failure: `uv run evaluate.py --termination none`.
-This records full-motion errors under a separate protocol; success still requires no failure.
 
 ## Checkpoint source
 
 [mrzuang/GRIT_teleop_deploy](https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md) · [sim2real/checkpoints/policy.onnx](https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx). Author-released checkpoint.
 
 Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.
+
+One `uv run evaluate.py` produces one verified `result.json`: success, completion,
+three MPBPE alignments through first failure and the same three over the full motion.
+Both scopes use the same checkpoint and source revision; no branch switching is needed.

@@ -30,6 +30,6 @@ download and evaluation progress updates every 5 seconds.
 
 Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.
 
-One `uv run evaluate.py` produces one verified `result.json`: success, completion,
-three MPBPE alignments through first failure and the same three over the full motion.
-Both scopes use the same checkpoint and source revision; no branch switching is needed.
+One `uv run evaluate.py` rolls out each complete motion once, then verifies the trace.
+The same trajectory provides success, completion and all six MPBPE values in one
+`result.json`, with one source revision. No branch switching is needed.

@@ -1,0 +1,59 @@
+{
+  "id": "grit-g1-development-v1",
+  "entrypoint": "adapter:create",
+  "control_period_s": 0.02,
+  "reference_step_s": 0.02,
+  "reference_steps": [
+    0,
+    2,
+    3,
+    5,
+    7,
+    8,
+    10,
+    12,
+    13
+  ],
+  "reference_offsets_s": [
+    0.0,
+    0.04,
+    0.06,
+    0.1,
+    0.14,
+    0.16,
+    0.2,
+    0.24,
+    0.26
+  ],
+  "reference_history_s": 0,
+  "reference_preview_s": 0.26,
+  "state_access": "privileged-state-v0",
+  "action_mode": "joint-pd-feedforward",
+  "inference_config": "policy.json",
+  "inference_config_sha256": "b15f84e0669c3d1e9046699c7ec9b37a76100d002c4086c21de6a0e4aad0c6ee",
+  "weights": "checkpoints/policy.onnx",
+  "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "virtual_bodies": {
+    "left_toe_link": {
+      "parent": "left_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    },
+    "right_toe_link": {
+      "parent": "right_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    }
+  },
+  "provenance_status": "author-inference review in progress",
+  "official": false,
+  "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
+  "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "weights_url": "https://drive.usercontent.google.com/download?id=10HGpqRJPDjITq9DmyORJeWpNHlC0oA8l&export=download"
+}

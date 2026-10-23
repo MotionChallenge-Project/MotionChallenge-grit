@@ -94,5 +94,5 @@
     ".*_ankle_pitch_joint": 0.43857731392336724,
     ".*_ankle_roll_joint": 0.43857731392336724
   },
-  "action_clip": 10.0
+  "action_clip": null
 }

@@ -5,9 +5,8 @@
   "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
   "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
   "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
-  "author_inference_review": "pending",
+  "author_inference_review": "Passed native observation, history/reset, ONNX and motor-target comparison: 160 cases, 4 resets, plus out-of-range raw-action conversion.",
   "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-  "legacy_results": "not transferable to this adapter revision without rerunning",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {
     "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",
@@ -19,5 +18,13 @@
     "verification": "Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.",
     "download_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
     "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
-  }
+  },
+  "inference_validation": "validation/native-parity.json",
+  "corrections": [
+    {
+      "reason": "Removed adapter-only action clipping at +/-10; the pinned author action path does not clip raw output.",
+      "evidence": "validation/before-correction.json",
+      "effect": "Complete evaluations are rerun under this source revision; old scores are not inherited."
+    }
+  ]
 }

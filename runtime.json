@@ -30,7 +30,7 @@
   "state_access": "privileged-state-v0",
   "action_mode": "joint-pd-feedforward",
   "inference_config": "policy.json",
-  "inference_config_sha256": "b15f84e0669c3d1e9046699c7ec9b37a76100d002c4086c21de6a0e4aad0c6ee",
+  "inference_config_sha256": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
   "weights": "checkpoints/policy.onnx",
   "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
   "virtual_bodies": {
@@ -51,7 +51,7 @@
       ]
     }
   },
-  "provenance_status": "author-inference review in progress",
+  "provenance_status": "native-source inference parity passed",
   "official": false,
   "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
   "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",

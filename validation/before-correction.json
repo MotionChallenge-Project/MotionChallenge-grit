@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "cases": 160,
+  "resets": 4,
+  "max_abs_error": {
+    "reference": 5.959948645717361e-08,
+    "history": 4.291534423828125e-06,
+    "network": 0.0,
+    "action": 4.291534423828125e-06,
+    "motor_target": 1.0914223913527366e-06,
+    "reset_history": 5.960464477539063e-08,
+    "synthetic_action_target": 5.475464332796451
+  },
+  "limits": {
+    "reference": 2e-05,
+    "history": 0.0002,
+    "network": 0.0,
+    "action": 0.0002,
+    "motor_target": 0.0002,
+    "reset_history": 2e-05,
+    "synthetic_action_target": 2e-05
+  },
+  "max_abs_native_action": 6.640591621398926,
+  "configured_action_clip": 10.0,
+  "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "scope": "Original GRIT reference features, term-major history, reset warmup, ONNX call and final controller target; transport/import glue omitted. Synthetic raw action range tests conversion separately."
+}

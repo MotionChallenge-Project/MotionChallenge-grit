@@ -1,0 +1,15 @@
+{
+  "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
+  "files": {
+    "sim2real/src/runtime/grit_observation.py": "5181c1c2dcd6b1edd20134ee60a4ea3ab4b95991f128cd1bc093f0b39a26188d",
+    "sim2real/src/runtime/grit_policy.py": "cac8899c87bea8d4ece972543187bf574a43460e274cab1c430db9e44c56264f",
+    "sim2real/src/runtime/policy.py": "251ab9392412358bfc45606905b13b5864c269546c7fb3d0a0dbb6a2d32e3253",
+    "sim2real/src/runtime/observation.py": "f557e5dd204c946b1e82915c8b923b5a6aad3259bed6e68f4057db496561fa5b",
+    "sim2real/src/common/joint_mapper.py": "9ffbcf935dda078497cd9a4c82db164abd7f9d81654e62b66de35aa3fa4fc5c3",
+    "sim2real/src/deploy.py": "10e9f9fb1ec96896cef7fdb4e9467d047f3aa480faba338e87b28dc7393c5929",
+    "sim2real/config/g1/controller.yaml": "9ef6e596f0ad23d47b8f28c175822bdfd46a1adc5e8549f5d8a51103c0afb846",
+    "sim2real/config/g1/tracking.yaml": "f2ecf321d37b1ffa8c7794ccae5c7f40f9183b7df3e97e2167948a19fcee2b42",
+    "sim2real/tests/test_grit_contract.py": "4c07349cd2c0a5eaef08e7aff984caa7c0e3783c50162efd2f05f7a5c5a897e2"
+  }
+}

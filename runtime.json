@@ -55,5 +55,5 @@
   "official": false,
   "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
   "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
-  "weights_url": "https://drive.usercontent.google.com/download?id=10HGpqRJPDjITq9DmyORJeWpNHlC0oA8l&export=download"
+  "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
 }

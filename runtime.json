@@ -1,5 +1,5 @@
 {
-  "id": "grit-g1-development-v1",
+  "id": "grit-g1-v1",
   "entrypoint": "restricted:create",
   "control_period_s": 0.02,
   "reference_step_s": 0.02,
@@ -51,14 +51,14 @@
       ]
     }
   },
-  "provenance_status": "native-source inference parity passed",
+  "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
   "official": false,
   "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
   "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
   "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
   "observation_contract": {
     "admission_record": "admission.json",
-    "admission_sha256": "21dbced465ebefecf68bee810f6aa1ef389982b59fb43f3ce60101b9aab3b066"
+    "admission_sha256": "acea0f7a179349ce5dfaf0ca743ff40ef4e2b629cc8a9ac27e6ddad87f47b0fc"
   },
   "array_batch_entrypoint": "batch_adapter:create",
   "inference_batch_size": 64

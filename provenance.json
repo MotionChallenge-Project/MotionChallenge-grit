@@ -1,12 +1,12 @@
 {
   "model": "grit",
   "submitter": "MotionChallenge",
-  "submission_type": "maintainer reproduction, not author submission",
+  "submission_type": "MotionChallenge reproduction",
   "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
   "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
   "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
   "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
-  "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+  "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {
     "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",

@@ -5,7 +5,7 @@
 ## Install and run
 
 ```bash
-git clone --recurse-submodules https://github.com/motion-challenge-project/motion-challenge-grit.git
+git clone --recurse-submodules https://github.com/MotionChallenge-Project/motion-challenge-grit.git
 cd motion-challenge-grit
 uv sync
 uv run evaluate.py

@@ -1,0 +1,48 @@
+{
+  "schema": "MotionChallenge/observation-admission-v1",
+  "model": "grit",
+  "display_name": "GRIT 99k",
+  "state_access": "ideal-proprioceptive-no-position-v1",
+  "status": "inference_verified",
+  "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "auxiliary_artifacts": {},
+  "checkpoint_origin": {
+    "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",
+    "author_release_label": "mrzuang/GRIT_teleop_deploy",
+    "kind": "author_file",
+    "kind_label": "Author-released checkpoint",
+    "artifact_page_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+    "original_filename": "sim2real/checkpoints/policy.onnx",
+    "verification": "Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.",
+    "download_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+    "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
+  },
+  "author_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
+  "author_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "base_adapter_commit": "f8192cf06a50668e6dd65b908432f17536af1d48",
+  "production_source_sha256": {
+    "adapter.py": "5f7fd750abd710e9352530744b88466c1573a2264088e29c7067a3ccd630fa40",
+    "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+    "native-sources.json": "b6e14d07934b54e9c25cea3e5cf3c0e781899ecc9f0d5e06c2375500b4c687f3",
+    "policy.json": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
+    "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749"
+  },
+  "prior_native_parity_sha256": {
+    "validation/native-parity.json": "5d618e8702905b717140ab90f284f88228b920aec6a4f86103ba5a75c05ab97a"
+  },
+  "handling": "Nine-frame reference context and 990D proprioceptive history use permitted orientation, joint state and angular velocity; preserve author reset warmup and raw-action history.",
+  "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
+  "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
+  "new_evaluation": {
+    "status": "queued",
+    "inherited_scores": false
+  },
+  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-grit",
+  "dependency_test": {
+    "path": "validation/observation-access.json",
+    "sha256": "ccf06effd894fb479726067fb47c6cf632499d3e0ff30d1dff999a64fd6d7e86",
+    "code": "validate_observations.py",
+    "cases": 160,
+    "resets": 4
+  }
+}

@@ -58,6 +58,8 @@
   "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
   "observation_contract": {
     "admission_record": "admission.json",
-    "admission_sha256": "5ea892ff2f3bf34e55c37e8c825bfd83c96aabaddeddb6b01b472c81991cb62b"
-  }
+    "admission_sha256": "21dbced465ebefecf68bee810f6aa1ef389982b59fb43f3ce60101b9aab3b066"
+  },
+  "array_batch_entrypoint": "batch_adapter:create",
+  "inference_batch_size": 64
 }

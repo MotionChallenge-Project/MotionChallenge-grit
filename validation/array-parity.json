@@ -1,0 +1,16 @@
+{
+  "cases": 370,
+  "reset_slots": 61,
+  "max_observation_difference": 5.9604644775390625e-06,
+  "max_target_difference_rad": 1.2547797600959143e-06,
+  "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "batch_adapter_sha256": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
+  "full_motion_parity": {
+    "samples": 441120,
+    "different_samples": 0,
+    "max_pose_difference": 0.0,
+    "max_metric_difference": 0.0,
+    "failures_equal": true,
+    "wall_s": 26.467199735343456
+  }
+}

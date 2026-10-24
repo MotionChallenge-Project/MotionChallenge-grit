@@ -1,12 +1,12 @@
-# Motion Challenge · grit
+# MotionChallenge · grit
 
 [Author project](https://github.com/mrzuang/GRIT_teleop_deploy) · [Checkpoint](https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx) · [Provenance](provenance.json)
 
 ## Install and run
 
 ```bash
-git clone --recurse-submodules https://github.com/MotionChallenge-Project/motion-challenge-grit.git
-cd motion-challenge-grit
+git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-grit.git
+cd MotionChallenge-grit
 uv sync
 uv run evaluate.py
 ```

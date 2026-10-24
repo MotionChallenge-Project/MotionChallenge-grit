@@ -1,6 +1,6 @@
 {
   "model": "grit",
-  "submitter": "Motion Challenge",
+  "submitter": "MotionChallenge",
   "submission_type": "maintainer reproduction, not author submission",
   "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
   "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",

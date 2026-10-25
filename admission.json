@@ -27,7 +27,8 @@
     "policy.json": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
     "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749",
     "batch_adapter.py": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
-    "validate_batch.py": "2d565f3ec91480f14c98b46e583d1a77d2deed5b0723fb30edb2405c762a2929"
+    "validate_batch.py": "2d565f3ec91480f14c98b46e583d1a77d2deed5b0723fb30edb2405c762a2929",
+    "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831"
   },
   "prior_native_parity_sha256": {
     "validation/native-parity.json": "5d618e8702905b717140ab90f284f88228b920aec6a4f86103ba5a75c05ab97a"
@@ -48,5 +49,10 @@
     "validation": "validation/array-parity.json",
     "sha256": "79655975e0950d31cf0b4ad4bff28daf74268d27d21095bd8b58a74324b86f0f",
     "handling": "Same author observations, reset history and raw-action history; one ONNX batch call with independent slot state. Engine-specific batching remains in this adapter."
+  },
+  "execution_validation": {
+    "path": "validation/concurrency.json",
+    "sha256": "34b2408dc25e90d4a4c57384c7d8afbdb0ba40269dd31eeeb4d9571ed222843c",
+    "scope": "Native outputs, independent histories/RNG, reordered slots/partial resets and all40 two-second closed-loop exact comparison; does not replace full benchmark evidence."
   }
 }

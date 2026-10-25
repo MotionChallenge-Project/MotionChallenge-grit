@@ -1,0 +1,113 @@
+{
+  "schema": "MotionChallenge/inference-concurrency-v1",
+  "core": "da0aec4023bbc3d29be67e1fce9fa9ab8a48c4b5",
+  "inference": {
+    "model": "grit",
+    "scope": "existing array batch40; thread counts compared to current 8-thread numerical baseline; 40 real initial states and six reference steps, three resets",
+    "records": [
+      {
+        "workers": 8,
+        "kind": "ORT intra_op, single batched graph call",
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.09205970168113708,
+          0.08390959724783897,
+          0.08450353145599365
+        ],
+        "median_40_calls_s": 0.014083921909332275
+      },
+      {
+        "workers": 1,
+        "kind": "ORT intra_op, single batched graph call",
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.1200907938182354,
+          0.11600400134921074,
+          0.12279026582837105
+        ],
+        "median_40_calls_s": 0.020015132303039234
+      },
+      {
+        "workers": 2,
+        "kind": "ORT intra_op, single batched graph call",
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.11054305359721184,
+          0.10914422199130058,
+          0.1096714660525322
+        ],
+        "median_40_calls_s": 0.01827857767542203
+      },
+      {
+        "workers": 4,
+        "kind": "ORT intra_op, single batched graph call",
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.09592980146408081,
+          0.09476905688643456,
+          0.10041635110974312
+        ],
+        "median_40_calls_s": 0.01598830024401347
+      },
+      {
+        "workers": 16,
+        "kind": "ORT intra_op, single batched graph call",
+        "exact": false,
+        "max_abs_delta": 4.051892975587279e-07,
+        "seconds_240_calls": [
+          0.13063819706439972,
+          0.08178949728608131,
+          0.08162595704197884
+        ],
+        "median_40_calls_s": 0.013631582881013552
+      },
+      {
+        "workers": 32,
+        "kind": "ORT intra_op, single batched graph call",
+        "exact": false,
+        "max_abs_delta": 4.3133054254684833e-07,
+        "seconds_240_calls": [
+          0.12273425981402397,
+          0.1411203145980835,
+          0.09220566600561142
+        ],
+        "median_40_calls_s": 0.020455709969003994
+      }
+    ],
+    "passed": true,
+    "selected_workers": 8,
+    "selected_speedup": 1.0,
+    "selected_kind": "array_intra_op",
+    "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+    "candidate_source_sha256": {
+      "validate_batch.py": "2d565f3ec91480f14c98b46e583d1a77d2deed5b0723fb30edb2405c762a2929",
+      "batch_adapter.py": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
+      "adapter.py": "5f7fd750abd710e9352530744b88466c1573a2264088e29c7067a3ccd630fa40",
+      "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+      "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+      "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749",
+      "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831"
+    },
+    "baseline_adapter": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/tree/94197c9c4c47afea93089fda715e3a42c9b38c3f"
+  },
+  "closed_loop": {
+    "model": "grit",
+    "passed": true,
+    "scope": "all40 clips, first2 seconds, physics feedback, exact pose and metric comparison against frozen formal source",
+    "pose_samples": 4000,
+    "seconds": {
+      "baseline": 5.6490321680903435,
+      "candidate": 5.394015546888113
+    },
+    "speedup": 1.0472776948797178,
+    "workers": 8,
+    "physical_cpus": "64,66,68,70,72,74,76,78",
+    "effective_scalar_workers": 8,
+    "baseline_result_sha256": "44c5b9d50478fc3320cc955b09bf334fab4f9cded0b6e2cea2e5dca98848e022",
+    "candidate_result_sha256": "aa3f8751123e24d5bd107875b1ea66b0b0f78341d09e1adbce80b6dc2ef2385e"
+  }
+}

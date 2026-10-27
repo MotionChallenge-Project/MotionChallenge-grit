@@ -9,7 +9,8 @@ p.add_argument('--output',type=Path,required=True)
 a=p.parse_args();a.core=root/'MotionChallenge-Core';a.runtime=root/'runtime.json'
 sys.path.insert(0,str(a.core/'src'))
 import numpy as np
-from motion_challenge.runtime.policy import ArrayInputs
+from dataclasses import fields
+from motion_challenge.sdk import StateBatch, ReferenceBatch
 from motion_challenge.runtime.observations import controller_state
 from motion_challenge.simulation.physics import World
 from motion_challenge.data.dataset import load_csv_motion
@@ -24,7 +25,23 @@ manifest=json.loads((a.core/'suites/lafan/dataset.json').read_text());motion=loa
 refs=[tuple(world.reference(t+x) for x in runtime['reference_offsets_s']) for t in (.0,.03,.2,.91,1.2)]
 slots=[9,2,12,0,6,5,20];singles={s:single(root,runtime) for s in slots};rng=np.random.default_rng(17)
 max_observation=max_action=0.;cases=resets=0
-buffer=ArrayInputs(dict(capacity=7,slots=21,frames=len(refs[0]),joints=world.joint_names,bodies=[b.name for b in refs[0][0].bodies]))
+def pack(states, windows):
+ state = StateBatch(joint_names=states[0].joint_names, **{
+  f.name: np.array([getattr(s, f.name) for s in states])
+  for f in fields(StateBatch) if f.name != 'joint_names'})
+ body_fields = {'body_position_world_m': 'position_world_m',
+  'body_orientation_xyzw': 'orientation_xyzw',
+  'body_linear_velocity_world_m_s': 'linear_velocity_world_m_s',
+  'body_angular_velocity_world_rad_s': 'angular_velocity_world_rad_s'}
+ values = {'body_names': tuple(b.name for b in windows[0][0].bodies)}
+ for f in fields(ReferenceBatch):
+  if f.name == 'body_names': continue
+  values[f.name] = np.array([
+   [[getattr(b, body_fields[f.name]) for b in r.bodies] for r in refs]
+   if f.name in body_fields else [getattr(r, f.name) for r in refs]
+   for refs in windows])
+ return state, ReferenceBatch(**values)
+
 for step in range(100):
  ids=slots if step==0 else [slots[i] for i in rng.permutation(7)[:(1,3,7)[step%3]]]
  states=[];windows=[]
@@ -33,8 +50,7 @@ for step in range(100):
   import mujoco
   mujoco.mj_forward(world.model,world.data)
   states.append(controller_state(world.state(),'ideal-proprioceptive-no-position-v1'));windows.append(refs[step%len(refs)])
-  buffer.put(row,states[-1],windows[-1])
- sa,ra=buffer.get_arrays(len(ids))
+ sa,ra=pack(states,windows)
  if step==0 or step%7==0:
   batch.reset_batch(tuple(ids),sa,ra,(0,)*len(ids));resets+=len(ids)
   for slot,state,ref in zip(ids,states,windows):singles[slot].reset(state,ref,0)

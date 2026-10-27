@@ -27,7 +27,7 @@
     "policy.json": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
     "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749",
     "batch_adapter.py": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
-    "validate_batch.py": "2d565f3ec91480f14c98b46e583d1a77d2deed5b0723fb30edb2405c762a2929",
+    "validate_batch.py": "e93c813704ccbda4f5a19b975943d0a0ff794cd8a98c2d583b1f5e26a2ae76eb",
     "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831"
   },
   "prior_native_parity_sha256": {

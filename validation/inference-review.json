@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "cases": 160,
+  "resets": 4,
+  "max_abs_error": {
+    "reference": 5.959948645717361e-08,
+    "history": 4.291534423828125e-06,
+    "network": 0.0,
+    "action": 4.291534423828125e-06,
+    "motor_target": 1.0914223913527366e-06,
+    "reset_history": 5.960464477539063e-08,
+    "synthetic_action_target": 6.004194101905114e-07
+  },
+  "limits": {
+    "reference": 2e-05,
+    "history": 0.0002,
+    "network": 0.0,
+    "action": 0.0002,
+    "motor_target": 0.0002,
+    "reset_history": 2e-05,
+    "synthetic_action_target": 2e-05
+  },
+  "max_abs_native_action": 6.640591621398926,
+  "configured_action_clip": null,
+  "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "scope": "Original GRIT reference features, term-major history, reset warmup, ONNX call and final controller target; transport/import glue omitted. Synthetic raw action range tests conversion separately.",
+  "review": {
+    "schema": "MotionChallenge/inference-review-v1",
+    "reviewed_at": "2026-10-27T07:41:40.030291+00:00",
+    "core_commit": "4bf520618f25f72d371117326edb01f4645eaa3f",
+    "base_adapter_commit": "7f020f77a39ebb45c27de0c93a51275ef2bdabd0",
+    "control_hz": 50.0,
+    "reference_offsets_s": [
+      0.0,
+      0.04,
+      0.06,
+      0.1,
+      0.14,
+      0.16,
+      0.2,
+      0.24,
+      0.26
+    ],
+    "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+    "auxiliary_sha256": {},
+    "deployment_route": "Pinned author deployment/tracking inference, with the shared benchmark observation boundary and physics.",
+    "production_files_sha256": {
+      "adapter.py": "5f7fd750abd710e9352530744b88466c1573a2264088e29c7067a3ccd630fa40",
+      "batch_adapter.py": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
+      "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+      "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831"
+    },
+    "inference_config_sha256": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
+    "comparison_script_sha256": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749",
+    "default_batch": {
+      "status": "passed",
+      "cases": 103,
+      "reset_slots": 20,
+      "max_command_abs_error": 4.1825992003197143e-07,
+      "exact": false,
+      "tolerance": 1e-05,
+      "wall_s": 0.5320178382098675,
+      "checks": [
+        "default PolicyBatch array transport",
+        "1/3/8 active slots",
+        "reordered slots",
+        "independent partial resets and seeded RNG",
+        "reference endpoint clamping",
+        "all five motor command fields"
+      ],
+      "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
+    },
+    "restricted_access": {
+      "status": "passed",
+      "cases": 160,
+      "resets": 4,
+      "tolerance_abs": 2e-05,
+      "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+      "network_calls": 160,
+      "max_abs_error": {
+        "observation": 0.0,
+        "network_output": 0.0,
+        "motor_command": 0.0
+      },
+      "checks": [
+        "160 matched state sequences / 4 resets",
+        "large actual translation perturbations",
+        "reference windows preserved including endpoints",
+        "all captured ONNX inputs and outputs",
+        "all PD command fields",
+        "forbidden-field counterfactual before transport"
+      ],
+      "limits": "Finite numerical regression plus source audit; not a proof against malicious code or implicit neural odometry."
+    },
+    "default_batch_script_url": "https://github.com/MotionChallenge-Project/motionchallenge/blob/2ef7ecab3b3a06bb4a53fa137de2d7f9365d6b50/tools/check_adapter_inference.py",
+    "default_batch_script_sha256": "2cb7984c27f4bbca2355ed2e05b5a48ca2e5ceb865850e1b6f2445f06b594241",
+    "scope": "Matched-input inference, observation boundary, deployment configuration and default batch path. No benchmark rollouts or scores were changed.",
+    "array_regression": {
+      "cases": 370,
+      "reset_slots": 61,
+      "max_observation_difference": 3.337860107421875e-06,
+      "max_target_difference_rad": 8.365198405080321e-07,
+      "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+      "batch_adapter_sha256": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816"
+    }
+  }
+}

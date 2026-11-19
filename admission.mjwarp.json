@@ -1,0 +1,35 @@
+{
+  "state_access": "proprioceptive-no-position-no-linear-velocity-v1",
+  "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "status": "inference_verified",
+  "reason": "Strict tensor observations, original inference parity and full-batch conversion checks passed.",
+  "schema": "MotionChallenge/observation-admission-v1",
+  "model": "grit",
+  "evidence_sha256": {
+    "validation/mjwarp-network-parity.json": "6d15c5ad5bfb5310d6e60a74304b45bbfe1f3c2c23e106cc49228a933f6f4578",
+    "validation/full-batch-parity.json": "8d535963e9d1cddca0b6119e955208390ca66d448034ac2ff46aed62b6fb29b0",
+    "validation/tensor-observation-parity.json": "8aefbdcfaed17bbbaeed88a1acb850351b23a179e65607602e3a3500b95bf4b0"
+  },
+  "production_source_sha256": {
+    "tensor_common.py": "518fc3b40e5c38078d1d2fce4cf7133f6aa614b442152a01fdbbd5e600401a2e",
+    "validate_batch.py": "9b9a640583cf0bea9c7df2cdff456ee7eb73d9badb2df1151e4d1784bc66356c",
+    "batch_adapter.py": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
+    "torch_graph.py": "7fd92161cb5465f0f2eb91429009dc3c6b6c4a4fb533300228f9c4262b6a4d4f",
+    "adapter.py": "5f7fd750abd710e9352530744b88466c1573a2264088e29c7067a3ccd630fa40",
+    "convert_weights.py": "486998deef93d9f21d7ae21b2c9ab68721a7d300e4311fe934eb3b31b25df75f",
+    "validate_tensor.py": "110d5a2c7dd3e84b538daa088d156d975f15fd40dc0b323657b1ee304182f123",
+    "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+    "evaluate.py": "f89bd2cf0333e7f5639431d6976253da3ad6ef8d490340362f4b4630d533d071",
+    "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749",
+    "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+    "validate_onnxruntime.py": "f23741266d9f58f968ae9dd79e433d89bfbf1109472e4911d8a0d83bc9352746",
+    "validate_adapter_batch.py": "7abb76894134b370306387f327b771245bcf8870e365b7b6df34630590f0fcca",
+    "tensor_adapter.py": "c0a29602188ec4a1641c084010a1e7d18fa0522457a23d09628700e3a30072e1"
+  },
+  "dataset_evaluation": {
+    "lafan_report": "validation/lafan-mjwarp.json",
+    "seed_report": "validation/seed-mjwarp.json",
+    "seed_attempt_report": "validation/seed-attempt.json",
+    "reproduction_report": "validation/lafan-reproduction.json"
+  }
+}

@@ -20,11 +20,12 @@
     "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
   },
   "inference_validation": "validation/native-parity.json",
-  "corrections": [
-    {
-      "reason": "Removed adapter-only action clipping at +/-10; the pinned author action path does not clip raw output.",
-      "evidence": "validation/before-correction.json",
-      "effect": "Complete evaluations are rerun under this source revision; old scores are not inherited."
-    }
-  ]
+  "batch_inference_validation": {
+    "original_checkpoint_origin": "validation/checkpoint-origin.json",
+    "conversion": "validation/mjwarp-network-parity.json",
+    "full_batch_network": "validation/full-batch-parity.json",
+    "full_batch_adapter": "validation/full-batch-adapter.json",
+    "observation_history_reset": "validation/tensor-observation-parity.json",
+    "independent_onnxruntime": "validation/onnxruntime-parity.json"
+  }
 }

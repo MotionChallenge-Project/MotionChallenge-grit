@@ -1,0 +1,77 @@
+{
+  "result_sha256": "c1923b09c2f946804f9db80d9cab976ab7a5ced6a1c1655e915ae6920018b1b5",
+  "protocol_sha256": "940b7b6e059959c17f8ad092ccc7538d217a02f368fc9c00ad7c15f2b07713a9",
+  "runtime_sha256": "45283d2a4bb8a61aae7eeffa15a9b8c41cedfcf0cbde2e1ba69e4f980b17a9a5",
+  "summary": {
+    "success_count": 32,
+    "completion": 0.9106183462117803,
+    "full": {
+      "mpjpe_world_m": 1.6260645521929527,
+      "mpjpe_xy_aligned_m": 0.06416712971532249,
+      "mpjpe_xy_yaw_aligned_m": 0.060797190582164165,
+      "joint_mae_rad": 0.10639852623266174,
+      "anchor_height_error_m": 0.038262703451276456,
+      "anchor_gravity_z_error": 0.06170916375598241
+    },
+    "prefix": {
+      "mpjpe_world_m": 1.4058130752059692,
+      "mpjpe_xy_aligned_m": 0.04356385567138346,
+      "mpjpe_xy_yaw_aligned_m": 0.040929181898516416,
+      "joint_mae_rad": 0.09948064263786052,
+      "anchor_height_error_m": 0.01789257714170469,
+      "anchor_gravity_z_error": 0.025103599703510386
+    }
+  },
+  "verification": {
+    "verification": "independent_cpu_trace_recomputation_passed",
+    "clips": 40,
+    "verifier_sha256": "822098272459bd44d65eb365cb0df9a5f3492410f63ab11cf055669b3a52237a",
+    "max_metric_abs_error": 6.942423358413663e-09,
+    "result_sha256": "c1923b09c2f946804f9db80d9cab976ab7a5ced6a1c1655e915ae6920018b1b5",
+    "scope": "Trace consistency only; a separate clean rerun is still required"
+  },
+  "workflow": "Independent locked uv environment and model-owned Core; empty evaluation cache; evaluate.py verifies explicitly supplied original weights, converts, prepares original LAFAN, evaluates 40 slots and independently verifies traces offline",
+  "installed_environment": {
+    "model": "grit",
+    "root": "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/MotionChallenge-grit",
+    "environment": "/tmp/motionchallenge-envs/grit",
+    "status": "locked_independent_environment_and_cli_verified",
+    "packages": 45,
+    "core_commit": "dbe13af14b4da5670590852b20e75fbcd509c413"
+  },
+  "core_commit": "dbe13af14b4da5670590852b20e75fbcd509c413",
+  "uv_lock_sha256": "39e17c4a2ae5ab4992571e65fdafa555481e3831d6f713e492ece04cfe5a04a7",
+  "command": [
+    "/tmp/motionchallenge-envs/grit/bin/python",
+    "evaluate.py",
+    "--dataset",
+    "lafan",
+    "--data",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/cache/datasets/lafan",
+    "--data-format",
+    "original",
+    "--cache",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/reproduction-cache/grit-independent-002",
+    "--output",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/runs/grit-lafan-independent-002",
+    "--weights",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/cache/exports/grit/policy.onnx",
+    "--offline",
+    "--device",
+    "cuda:1",
+    "--slots",
+    "40",
+    "--verify-jobs",
+    "8"
+  ],
+  "numeric_scope": "Full independent pipeline and CPU trace consistency; repeated rollouts are not asserted bitwise identical",
+  "status": "independent_cache_pipeline_passed",
+  "cache_initial_state": "empty",
+  "data_format": "original",
+  "clips": 40,
+  "entrypoint": "evaluate.py",
+  "input_sources": "Original local dataset and original SHA256-verified checkpoint supplied explicitly",
+  "conversion_receipt_sha256": "f13508d9f0eac1dcb57a8b32112643cd6cd6eaa5e58d96f462aacf2baa18b71e",
+  "same_identity_dual_run_claim": false,
+  "numerical_reproduction_claim": false
+}

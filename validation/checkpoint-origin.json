@@ -1,0 +1,23 @@
+{
+  "status": "author_release_verified",
+  "model": "grit",
+  "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+  "artifact_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+  "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "artifact_bytes": 9441300,
+  "verified_at": "2026-11-19T05:06:36.995302+00:00",
+  "verification_scope": "Official author release link chain and complete artifact download SHA256. The downloaded bytes exactly match the original checkpoint used in the recorded evaluations. Conversion and controller parity are separately recorded; this record does not assert rollout success.",
+  "download_verification": {
+    "method": "fresh_complete_https_download_on_mac",
+    "sha256_matches_evaluated_original": true
+  },
+  "release_evidence": [
+    {
+      "url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+      "kind": "artifact_in_pinned_author_repository"
+    }
+  ],
+  "conversion_evidence": "mjwarp-network-parity.json",
+  "independent_onnxruntime_evidence": "onnxruntime-parity.json"
+}

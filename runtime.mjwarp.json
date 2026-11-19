@@ -1,0 +1,70 @@
+{
+  "id": "grit-g1-v1",
+  "control_period_s": 0.02,
+  "reference_step_s": 0.02,
+  "reference_steps": [
+    0,
+    2,
+    3,
+    5,
+    7,
+    8,
+    10,
+    12,
+    13
+  ],
+  "reference_offsets_s": [
+    0.0,
+    0.04,
+    0.06,
+    0.1,
+    0.14,
+    0.16,
+    0.2,
+    0.24,
+    0.26
+  ],
+  "reference_history_s": 0,
+  "reference_preview_s": 0.26,
+  "state_access": "proprioceptive-no-position-no-linear-velocity-v1",
+  "action_mode": "joint-pd-feedforward",
+  "inference_config": "policy.json",
+  "inference_config_sha256": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
+  "weights": "checkpoints/policy.onnx",
+  "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+  "virtual_bodies": {
+    "left_toe_link": {
+      "parent": "left_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    },
+    "right_toe_link": {
+      "parent": "right_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    }
+  },
+  "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
+  "official": false,
+  "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
+  "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+  "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+  "observation_contract": {
+    "admission_record": "admission.mjwarp.json",
+    "admission_sha256": "7b54cbb8066ab036f91438072f00f4de72a2828d4785a0b0f8c83e93f55800fa"
+  },
+  "inference_batch_size": 64,
+  "inference_threads": 8,
+  "migration_status": "inference_verified",
+  "tensor_entrypoint": "tensor_adapter:TensorGRIT",
+  "tensor_conversion": "convert_weights:prepare",
+  "tensor_outputs": [
+    "actions"
+  ]
+}

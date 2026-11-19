@@ -2,7 +2,7 @@
   "model": "grit",
   "status": "passed",
   "errors": [],
-  "core_commit": "2221fab60a90adc3c85b1dfd438e00244fb58263",
+  "core_commit": "e4cb035b9f95ec820c4a0384df1f4ebdcbc0abf4",
   "runtime_sha256": "45283d2a4bb8a61aae7eeffa15a9b8c41cedfcf0cbde2e1ba69e4f980b17a9a5",
   "locked_environment_and_cli": true,
   "own_core_import": "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/MotionChallenge-grit/MotionChallenge-Core/src/motion_challenge/__init__.py",

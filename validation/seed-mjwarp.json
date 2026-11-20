@@ -1,6 +1,6 @@
 {
   "result_sha256": "c2ac1c27c68cdc41ab8ba3523afc673e51ba4b6bb63fff64235529618abc7b19",
-  "protocol_sha256": "3900f88a933613534e896fcd6732fa19bde6ed772d36cad017b9cb7f0e8269b7",
+  "protocol_sha256": "55667e7ee930b0cab378f6cc911b82c1107482c8d242a4d48873845eb9c2d581",
   "runtime_sha256": "45283d2a4bb8a61aae7eeffa15a9b8c41cedfcf0cbde2e1ba69e4f980b17a9a5",
   "dataset_identity": {
     "dataset": "seed",
@@ -53,17 +53,17 @@
     "success_count": 128942,
     "completion": 0.9972262348913861,
     "full": {
-      "mpjpe_world_m": 0.1641455642947672,
-      "mpjpe_xy_aligned_m": 0.03263741548122968,
-      "mpjpe_xy_yaw_aligned_m": 0.03210887463145762,
+      "mpkpe_world_m": 0.1641455642947672,
+      "mpkpe_xy_aligned_m": 0.03263741548122968,
+      "mpkpe_xy_yaw_aligned_m": 0.03210887463145762,
       "joint_mae_rad": 0.08882206487564628,
       "anchor_height_error_m": 0.01137705004321814,
       "anchor_gravity_z_error": 0.014556335348341927
     },
     "prefix": {
-      "mpjpe_world_m": 0.16253750454788965,
-      "mpjpe_xy_aligned_m": 0.032149637073944276,
-      "mpjpe_xy_yaw_aligned_m": 0.03164779737663551,
+      "mpkpe_world_m": 0.16253750454788965,
+      "mpkpe_xy_aligned_m": 0.032149637073944276,
+      "mpkpe_xy_yaw_aligned_m": 0.03164779737663551,
       "joint_mae_rad": 0.08866410460604923,
       "anchor_height_error_m": 0.010952947167172256,
       "anchor_gravity_z_error": 0.01359617970851652
